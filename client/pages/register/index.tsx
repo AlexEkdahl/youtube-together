@@ -4,6 +4,8 @@ import { useForm } from '../../hooks/useForm'
 import { TextInput } from '../../components/inputs/TextInput'
 import { validateSignUp } from '../../utils/formValidationRules'
 import { Form, Headline, SignupButton } from './register.styled'
+import { textColors } from '../../styles/variables'
+import { Select } from '../../components/inputs/Select'
 
 const register = () => {
   const submitForm = async () => {
@@ -44,6 +46,16 @@ const register = () => {
         value={values.username}
         onChange={onChangeHandler}
       />
+
+      <Select label="Colors" name="colors">
+        {Object.keys(textColors).map((color, index) => {
+          return (
+            <option key={index} value={textColors[color]}>
+              {color}
+            </option>
+          )
+        })}
+      </Select>
       <TextInput
         label="Choose a color"
         placeholder="Choose a color..."
