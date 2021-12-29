@@ -8,6 +8,14 @@ import { textColors } from '../../styles/variables'
 import { Select } from '../../components/inputs/Select'
 
 const register = () => {
+  const initialValue = {
+    username: '',
+    color: '',
+    email: '',
+    password: '',
+    repeat: ''
+  }
+
   const submitForm = async () => {
     // eslint-disable-next-line
     const { repeat, ...signupValues } = values
@@ -25,13 +33,7 @@ const register = () => {
 
   const { values, errors, onChangeHandler, handleSubmit } = useForm(
     submitForm,
-    {
-      username: '',
-      color: '',
-      email: '',
-      password: '',
-      repeat: ''
-    },
+    initialValue,
     validateSignUp
   )
 
