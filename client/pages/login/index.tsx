@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 
 import { TextInput } from '../../components/inputs/TextInput'
 import { ErrorMessage, FormContainer } from './Login.styled'
+=======
+import React from 'react'
+
+import { TextInput } from '../../components/inputs/TextInput'
+import { FormContainer } from './Login.styled'
+>>>>>>> 5d41cd2916120f7704015df998677e4fd67764dc
 import { useForm } from '../../hooks/useForm'
 import { LoginButton } from './Login.styled'
 
@@ -10,7 +17,10 @@ export default function Login() {
     email: '',
     password: ''
   })
+<<<<<<< HEAD
   const [error, setError] = useState(false)
+=======
+>>>>>>> 5d41cd2916120f7704015df998677e4fd67764dc
 
   const submitHandler = async () => {
     if (!loginData.email || !loginData.password) return
@@ -22,8 +32,13 @@ export default function Login() {
       body: JSON.stringify(loginData)
     })
 
+<<<<<<< HEAD
     if (!res.ok) return setError(true)
     const data = await res.json()
+=======
+    const data = await res.json()
+    console.log('data :>> ', data)
+>>>>>>> 5d41cd2916120f7704015df998677e4fd67764dc
   }
 
   return (
@@ -41,8 +56,11 @@ export default function Login() {
         name="password"
         onChange={onChangeHandler}
       />
+<<<<<<< HEAD
 
       {error && <ErrorMessage>Invalid email or password</ErrorMessage>}
+=======
+>>>>>>> 5d41cd2916120f7704015df998677e4fd67764dc
       <LoginButton onClick={submitHandler}>Login</LoginButton>
     </FormContainer>
   )
