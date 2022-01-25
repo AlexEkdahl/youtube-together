@@ -19,6 +19,7 @@ export const Container = styled.div`
   max-width: 1530px;
   margin: auto;
   background: ${colors.darkest};
+  overflow-y: auto;
 
   @media screen and (max-width: ${sizes.desktop}px) {
     grid-template-columns: 1fr;
@@ -43,6 +44,8 @@ export const ChatContainer = styled.div`
   overflow-y: auto;
   flex-shrink: 1;
   z-index: 1;
+  min-height: 400px;
+  padding-bottom: ${spacings.medium};
 `
 
 export const MainSectionContainer = styled.div`
