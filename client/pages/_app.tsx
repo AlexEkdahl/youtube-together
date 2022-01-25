@@ -47,6 +47,7 @@ function App({ Component, pageProps }: AppProps) {
             name="viewport"
             content="initial-scale=1.0, maximum-scale=1, width=device-width"
           />
+          <meta property="og:locale" content="sv" />
         </Head>
         <GlobalStyle />
         <Component {...pageProps} />

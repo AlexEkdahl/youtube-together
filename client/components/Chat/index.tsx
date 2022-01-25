@@ -173,6 +173,7 @@ const Chat = ({ room, user }: ChatProps) => {
             }}
             onFocus={() => setInputFocus(true)}
             onBlur={() => setInputFocus(false)}
+            autoComplete="off"
           />
           <SubmitButton
             onClick={onClickHandler}
